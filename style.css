@@ -1,0 +1,208 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Rubik', sans-serif;
+    background: #111;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,h3 {
+    font-weight: 400;
+}
+
+.weather-app {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    transition: 500ms;
+    opacity: 1;
+}
+
+.weather-app.doj {
+    background-image: url(https://i.gifer.com/6beZ.gif);
+}
+
+.weather-app.sneg {
+    background-image: url(https://dynamicpowerpoint.com/wp-content/uploads/2022/02/snow-at-night-full-hd-weather-icon-sample.gif);
+}
+
+.weather-app.obloch {
+    background-image: url(https://newtimes.kz/storage/news/2022/08/vAl9oTqYGRvHmp2YOUvg.gif);
+}
+
+.weather-app.asno {
+    background-image: url(https://i.gifer.com/origin/f4/f437524b815d9d77d659da4c3a0a9213_w200.gif);
+}
+
+.weather-app.smoke {
+    background-image: url(https://i.pinimg.com/originals/67/e7/80/67e7804a3864631c7291558a76be1ffb.gif);
+}
+.weather-app.fog {
+    background-image: url(https://media.tenor.com/images/9cf4e8c067180bfe52ae2ca88fa9adfb/tenor.gif);
+}
+.weather-app.mist {
+    background-image: url(https://i.gifer.com/embedded/download/8AC8.gif);
+}
+
+.weather-app::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    height: 720px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2em 3em 4em 3em;
+}
+
+.temp-data {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.condition {
+    margin-left: 10px;
+}
+.weather .icon {
+    margin-left: 4px;
+}
+.city-time h1 {
+    margin: 0;
+    margin-bottom: 0.2em;
+    font-size: 3em;
+}
+
+.temp {
+    font-size: 7em;
+    margin: 0;
+}
+
+.weather img {
+    display: block;
+    margin: 0.5em 0;
+}
+
+.panel {
+    position: absolute;
+    width: 100%;
+    max-width: 526px;
+    height: 730px;
+    top: 0;
+    right: 0;
+    background: rgba(110, 110, 110, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 3em 2em;
+}
+
+.panel form {
+    margin-bottom: 3em;
+}
+
+.submit {
+    width: 40px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    transition: 0.4s;
+}
+
+.submit:hover {
+    background: transparent !important;
+    color: #000000;
+}
+
+.search {
+    background: none;
+    border: none;
+    border-bottom: 1px #ccc solid;
+    width: 100%;
+    max-width: 371px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.search::placeholder {
+    color: #ccc;
+}
+
+.panel ul {
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    border-bottom: 1px #ccc solid;
+}
+
+.panel ul li {
+    color: #ccc;
+    margin: 2.5em 0;
+}
+
+.panel ul h4 {
+    margin: 3em 0;
+}
+
+.details li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.span-t {
+    margin-right: 290px;
+}
+
+@media (max-width: 600px) {
+    .weather-app {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 1em;
+    }
+
+    .temp {
+        font-size: 5em;
+    }
+
+    .city-time h1 {
+        font-size: 2em;
+    }
+
+    .panel {
+        width: 100%;
+        padding: 2em 1em;
+    }
+
+    .search {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .span-t {
+        margin-right: 10px;
+    }
+}
